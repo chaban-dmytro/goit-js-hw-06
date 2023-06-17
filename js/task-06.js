@@ -4,13 +4,20 @@ inputEl.id = ( 'validation-input' );
 inputEl.addEventListener( 'blur', checkSymbols );
 
 function checkSymbols( event ) {
-  if ( inputEl.dataset.length == event.currentTarget.value.length ) {
-    inputEl.classList.add( 'valid' );
-    inputEl.classList.remove('invalid')
+  if ( Number(inputEl.dataset.length) === Number(event.currentTarget.value.length) ) {
+    addClass('valid');
+    removeClass('invalid');
   } else {
-    inputEl.classList.add( 'invalid' );
-    inputEl.classList.remove( 'valid' );
-
+    addClass('invalid');
+    removeClass('valid');
   };
+}
+
+function addClass( className ) {
+  inputEl.classList.add(className);
+};
+
+function removeClass( className ) {
+  inputEl.classList.remove(className);
 }
 
