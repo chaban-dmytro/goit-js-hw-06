@@ -15,7 +15,6 @@ const min = Number(inputEl.getAttribute( 'min' ));
 const max = Number( inputEl.getAttribute( 'max' ) );
 const step = Number( inputEl.getAttribute( 'step' ) );
 
-
 inputEl.addEventListener( 'blur', (event) => {
   total = event.currentTarget.value;
 } );
@@ -36,6 +35,7 @@ function createBoxes() {
       console.log( element );
       outputEl.appendChild( element );
     }
+    inputEl.value = null;
   } else {
     alert( `Введи число в діапазоні від ${min} до ${max}!` );
   }

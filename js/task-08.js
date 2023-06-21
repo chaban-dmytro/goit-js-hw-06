@@ -14,7 +14,7 @@ function onFormSubmit( event ) {
     event.target.reset()
     console.log( user );
   } else {
-    return alert('Всі поля повинні дути заповнені!')
+    return alert('Всі поля повинні бути заповнені!')
   }
 }
 
